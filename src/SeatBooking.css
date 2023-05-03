@@ -1,0 +1,68 @@
+.seat-booking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  /* .seat-booking h2 
+  {
+    margin: 10px auto;
+  }
+
+  .seat-booking p:nth-child(2)
+  {
+    margin-bottom: 5%;
+  } */
+
+  .seat-map {
+   display: flex;
+    flex-direction: column;
+  }
+  
+  .row {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .seat {
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  
+  .booked {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+  
+  p {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  .checkout-btn {
+    margin-top: 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .checkout-btn:hover {
+    background-color: darkblue;
+  }
+  

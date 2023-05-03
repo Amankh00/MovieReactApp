@@ -1,0 +1,96 @@
+.card-grid 
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,250px)); 
+  justify-content: space-evenly;
+  margin: auto;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+ 
+}
+
+
+.card 
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 2px solid #071b15;
+  margin: 1% 2% 15%;
+
+border-top-right-radius: 5%;
+border-top-left-radius: 5%;
+}
+.card:hover
+{
+  box-shadow: white 1px 1px 50px ; 
+  /* outline: 1px solid white; */
+  width: 101%;
+}
+
+.image_box 
+{
+  display: flex;
+  justify-content: center;
+}
+
+.image_box img
+ {
+  width: 98%;
+  border-radius: 5% 2%;
+ }
+
+.details
+ {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 5px;
+  color: #b7b3b3;
+  font-family: serif;
+
+  margin: auto;
+  text-align: center;
+ }
+
+ .details h1 
+ {
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 20px;
+  text-transform: uppercase;
+ }
+
+.description 
+{
+  height: 79px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+  /* word-wrap: break-word; */
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: small;
+}
+
+.details button
+{
+  background: none;
+  color: rgb(180, 179, 190);
+  margin-top: 20px;
+  font-family: serif;
+  font-style: italic;
+  font-size: large;
+  border: transparent;
+  padding: 2px 15px;
+  border-bottom: 3px solid #021109;
+  box-shadow: rgb(67, 13, 13) 2px 3px 5px;
+
+}
+.details button:Hover
+{
+  font-size: larger;
+}
+.details button:active
+{
+  font-size: 15px;
+}

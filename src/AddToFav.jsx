@@ -57,7 +57,7 @@ const AddToFav = ({ fav, search, imgUri, setFav }) => {
       {
       isAuthenticated ? (
         <>
-          <Home />
+        
          
             <div className="card-grid">
               {fav
@@ -86,7 +86,7 @@ const AddToFav = ({ fav, search, imgUri, setFav }) => {
         
        : (
         <>
-          <Link to="/">Home</Link>
+         <Home />
           <div className="allMovieListl">
               <marquee
                 style={{

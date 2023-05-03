@@ -1,0 +1,117 @@
+.content
+{
+    background: black;
+    color:rgb(196, 186, 186);
+    font-family:'Times New Roman', Times, serif;
+    
+}
+.content1
+{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    padding: 10px;
+    justify-content: space-evenly;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.content1 button
+{
+    margin: 0;
+    background-color:rgb(164, 42, 8) ;
+    color: azure;
+    font-size: .9rem;
+    border-radius: 10px;
+    padding: 2px 8px;
+}
+
+.content2 
+{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+    font-size: x-large;
+}
+
+.content3
+{
+    font-size: small;
+    padding: 2px;
+}
+
+.content3 h3
+{
+    margin: 15px 2px 2px  0px;
+}
+
+.content4 
+{
+    margin: 20px;
+    text-align: center;
+}
+.content4 img
+{
+    width: 100px;
+    background: none;
+    background: transparent;
+    text-decoration: cornsilk;
+}
+.content5 
+{
+  display: flex;
+  justify-content: center;
+  gap:10px;
+  margin: 50px 0px; 
+  font-size: small;
+}
+
+.content6
+{
+    margin-top:20px ;
+}
+
+.content6 p
+{
+    font-size: small;
+    text-align: center;
+    margin: 0 5px;
+    padding-bottom: 40px;
+}
+
+@media screen and (max-width:360px) {
+ 
+.content1
+{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+    .content2
+    {
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+    }
+.content3 
+{
+    margin: 0;
+    padding: 0;
+}
+.content3 h3
+    .content6 
+    {
+        margin: 0;
+        padding-bottom: 40px;
+    }
+
+    .content6 p
+    {
+       margin: 0;
+       padding: 0;
+       min-width: 20px;
+       padding-bottom: 20px;
+    }
+   
+  }

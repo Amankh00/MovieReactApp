@@ -45,6 +45,7 @@ const NavBar = ({ fav, setFav, setSearch, imgUri }) => {
             <span> 
              <abbr title="FAVOURITE ITEM HERE">
              <i className="fa-solid fa-heart" id="myBtn" ></i>
+           
             </abbr>
             </span>
             
@@ -75,14 +76,14 @@ const NavBar = ({ fav, setFav, setSearch, imgUri }) => {
       ?
         
        
-            <button onClick={() => loginWithRedirect()}>Log In</button>
+            <button onClick={() => loginWithRedirect()}>LogIn</button>
            
 
         :
          
         
            <button   onClick={() => logout({ logoutParams: { returnTo:    window.location.origin } })}>
-                                                   Log Out
+             LogOut
            </button>
          
   }

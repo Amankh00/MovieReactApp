@@ -7,6 +7,8 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import SeatBooking from './SeatBooking';
 import Checkout from './Checkout';
+import Footer from './Footer';
+
 
 function App() {
   const[data , setData] = useState([]);
@@ -29,7 +31,7 @@ function App() {
       clientId="iZ07KqoMhtLkEUQJsw7kaNA099rvuqCM"
       authorizationParams=
       {{redirect_uri: window.location.origin}} >
-    
+        
     
       <BrowserRouter> <NavBar fav={fav} setFav={setFav} setSearch={setSearch} imgUri={imgUri} />
       <Routes>
@@ -48,10 +50,11 @@ function App() {
      
       
         {/* <NavBar search={search} setSearch={setSearch}/> */}
-      
+   
    
     </Routes>
     </BrowserRouter>
+    <Footer/>
      </Auth0Provider>
  
         </>

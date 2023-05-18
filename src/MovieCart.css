@@ -15,10 +15,9 @@
   flex-direction: column;
   justify-content: space-evenly;
   border: 2px solid #071b15;
-  margin: 1% 2% 15%;
-
-border-top-right-radius: 5%;
-border-top-left-radius: 5%;
+  margin: 5% 2% 15%;
+  border-top-right-radius: 5%;
+  border-top-left-radius: 5%;
 }
 .card:hover
 {

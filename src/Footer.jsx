@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+
 import "./Footer.css";
 
 const Footer = ()=>
@@ -14,9 +14,9 @@ const Footer = ()=>
 </div>
 
 <div className="content2">
- <div><i class="fa-sharp fa-solid fa-headset fa-xl"></i><p>24/7 CUSTOMER CARE</p></div> 
- <div>  <i class="fa-solid fa-ticket fa-xl"></i><p>RESEND BOOKING CONFIRMATION</p></div> 
- <div>   <i class="fa-solid fa-envelope fa-xl"></i><p>SUBSCRIBE TO NEWSLETTER</p></div> 
+ <div><i className="fa-sharp fa-solid fa-headset fa-xl"></i><p>24/7 CUSTOMER CARE</p></div> 
+ <div>  <i className="fa-solid fa-ticket fa-xl"></i><p>RESEND BOOKING CONFIRMATION</p></div> 
+ <div>   <i className="fa-solid fa-envelope fa-xl"></i><p>SUBSCRIBE TO NEWSLETTER</p></div> 
 </div>
 
 <div className="content3">
@@ -67,12 +67,12 @@ Lollapalooza India | Superstar | BookASmile | Corporate Vouchers | Gift Cards | 
 </div>
 
 <div className="content5">
-<i class="fa-brands fa-facebook fa-beat fa-2xl"></i>
-<i class="fa-brands fa-twitter fa-beat-fade fa-2xl"></i>
-<i class="fa-brands fa-instagram fa-beat-fade fa-2xl"></i>
-<i class="fa-brands fa-youtube fa-beat-fade fa-2xl"></i>
-<i class="fa-brands fa-pinterest fa-beat-fade fa-2xl"></i>
-<i class="fa-brands fa-linkedin-in fa-beat fa-2xl"></i>
+<i className="fa-brands fa-facebook fa-beat fa-2xl"></i>
+<i className="fa-brands fa-twitter fa-beat-fade fa-2xl"></i>
+<i className="fa-brands fa-instagram fa-beat-fade fa-2xl"></i>
+<i className="fa-brands fa-youtube fa-beat-fade fa-2xl"></i>
+<i className="fa-brands fa-pinterest fa-beat-fade fa-2xl"></i>
+<i className="fa-brands fa-linkedin-in fa-beat fa-2xl"></i>
 </div>
 
 <div className="content6">

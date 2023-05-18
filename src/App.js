@@ -1,4 +1,4 @@
-import { useState,useRef } from 'react';
+import { useState } from 'react';
 import MovieCart from "./MovieCart"
 import GenreSection from './GenreSection';
 import AddToFav from './AddToFav';
@@ -7,7 +7,7 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import SeatBooking from './SeatBooking';
 import Checkout from './Checkout';
-import Footer from './Footer';
+
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
   const[fav, setFav] = useState([]);
   const[r, setr] = useState([]);
   const [bookedSeats, setBookedSeats] = useState([]);
-  const inp = useRef();
+  
   const API = "https://api.themoviedb.org/3/movie/now_playing?api_key=5734bda21a5245b75d2933c869017937&language=en-us"
    const imgUri = "https://image.tmdb.org/t/p/w300/";
  
@@ -54,7 +54,7 @@ function App() {
    
     </Routes>
     </BrowserRouter>
-    <Footer/>
+
      </Auth0Provider>
  
         </>

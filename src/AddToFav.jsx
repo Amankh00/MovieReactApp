@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import "./MovieCart";
 import { useAuth0 } from "@auth0/auth0-react";
 import Home from "./Home";
@@ -8,7 +7,7 @@ const { v4: uuidv4 } = require('uuid');
 
 const AddToFav = ({ fav, search, imgUri, setFav }) => {
   
-  const { user, isAuthenticated } = useAuth0();
+  const {  isAuthenticated } = useAuth0();
 
 
    // Listen for changes to the `fav` state and update local storage
@@ -54,11 +53,28 @@ const AddToFav = ({ fav, search, imgUri, setFav }) => {
   
   return (
     <>
+       <Home />
       {
       isAuthenticated ? (
-        <>
-        
-         
+      
+         fav.length === 0 ? (
+          <div className="allMovieListl">
+            <marquee
+              style={{
+                textTransform: "uppercase",
+                color: "green",
+                padding: "16px",
+                fontSize: "25px",
+              }}
+              behavior="alternate"
+              width="100%"
+              direction="left"
+            >
+              Your cart is empty
+            </marquee>
+          </div>
+        ) : (
+     
             <div className="card-grid">
               {fav
                 .filter((movie) =>
@@ -66,6 +82,7 @@ const AddToFav = ({ fav, search, imgUri, setFav }) => {
                 )
                 .map((movie) => (
                   <section key={uuidv4()}>
+                   
                     <div className="card">
                       <div className="image_box">
                         <img src={`${imgUri}${movie.poster_path}`} alt={movie.title} />
@@ -81,12 +98,12 @@ const AddToFav = ({ fav, search, imgUri, setFav }) => {
                 ))}
             </div>
           
-        </>
+        )
             )
         
        : (
         <>
-         <Home />
+       
           <div className="allMovieListl">
               <marquee
                 style={{

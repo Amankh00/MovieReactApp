@@ -4,7 +4,7 @@ import "./MovieCart.css";
 import { useAuth0 } from "@auth0/auth0-react";
 import  GenreSection  from './GenreSection';
 import { Link } from 'react-router-dom';
-import Checkout from './Checkout';
+
 
 import T from './T';
 

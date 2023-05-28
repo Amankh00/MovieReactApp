@@ -88,6 +88,8 @@
 .details button:Hover
 {
   font-size: larger;
+  padding: 3px 18px;
+  background-color: purple;
 }
 .details button:active
 {

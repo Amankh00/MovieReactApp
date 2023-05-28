@@ -1,49 +1,59 @@
 import React, { useState } from 'react';
 import './Checkout.css';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-const Checkout = ({ amount, bookedSeats }) =>
- {
-    const [name, setName] = useState('');
-    const handleNameChange = (event) => 
-    {
+const Checkout = ({ totalAmount, selectedSeats }) => {
+  const [name, setName] = useState('');
+  const navigate = useNavigate();
+
+  const handleNameChange = (event) => {
     setName(event.target.value);
-    };
-const red = (e)=>
-{
-    e.preventDefault();
-}
-const goto = ()=>
-{
-   alert("this is dummy payment");
-}
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    if (name.trim() === '') {
+      alert('Name is required');
+      return;
+    }
+
+    alert('This is a dummy payment');
+    navigate('/');
+    
+  };
 
   return (
     <div className="checkout-container">
       <h2 className="checkout-title">Checkout</h2>
-      
-      <p className="checkout-booked-seats">Booked Seats: {bookedSeats?.join(', ')}</p>
-      <p type="submit" className="check">Total Number of seat Book - {bookedSeats?.length}</p>
-      <p type="submit" className="check">Total Amount ${amount}</p>
-      {/* <p type="submit" className="check">Total Amount ${amount}</p> */}
-      <form className="checkout-form" onClick={red}>
+      <p className="check">Total Number of Seats Booked: {selectedSeats}</p>
+      <p className="check">Total Amount: {totalAmount} /- Rupees</p>
+      <form className="checkout-form" onSubmit={handleSubmit}>
         <div className="form-row">
           <label htmlFor="name" className="form-label">Name:</label>
-          <input type="text" id="name" className="form-input" value={name} onChange={handleNameChange} />
+          <input
+            type="text"
+            id="name"
+            className="form-input"
+            value={name}
+            onChange={handleNameChange}
+            required
+          />
         </div>
         <div className="form-row">
           <label htmlFor="cardNumber" className="form-label">Card Number:</label>
-          <input type="text" id="cardNumber" className="form-input" />
+          <input type="NUMBER"  id="cardNumber" maxLength="12" minLength="12" className="form-input" required/>
         </div>
         <div className="form-row">
           <label htmlFor="expiryDate" className="form-label">Expiry Date:</label>
-          <input type="text" id="expiryDate" className="form-input" />
+          <input type="DATE" id="expiryDate" className="form-input" required/>
         </div>
         <div className="form-row">
           <label htmlFor="cvv" className="form-label">CVV:</label>
-          <input type="text" id="cvv" className="form-input" />
+          <input type="NUMBER" id="cvv" className="form-input" required/>
         </div>
-    <Link to="/"> <button type="submit" className="checkout-btn" onClick={goto}>Pay ${amount}</button></Link>   
+        <a href="/">
+        <button type="submit" className="checkout-btn">Pay ${totalAmount}</button></a>
       </form>
     </div>
   );

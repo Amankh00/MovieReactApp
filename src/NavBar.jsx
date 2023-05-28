@@ -31,7 +31,7 @@ const NavBar = ({ fav, setFav, setSearch, imgUri }) => {
       <a href="/">
         {/* <marquee width="200px" direction="right" height="90px">   */}
         <abbr title="Book My Show">
-        <img src="https://logodix.com/logo/2010904.jpg" alt="" className="logo"/>
+       <h1 className="logo">BookMyShow</h1>
         </abbr>
         {/* </marquee>    */}
         </a>
@@ -76,16 +76,15 @@ const NavBar = ({ fav, setFav, setSearch, imgUri }) => {
       ?
         
        
-            <button onClick={() => loginWithRedirect()}>LogIn</button>
+      <button onClick={() => loginWithRedirect()}>Log In</button>
            
 
         :
          
         
-           <button   onClick={() => logout({ logoutParams: { returnTo:    window.location.origin } })}>
-             LogOut
-           </button>
-         
+        <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+        Log Out
+      </button>
   }
    </div>
 

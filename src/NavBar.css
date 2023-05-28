@@ -7,26 +7,39 @@
 
 .head
 {
-  display: grid;
-  grid-template-columns: repeat(4,180px);
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
    width: 100%;
-   height: 150px;
+   height: 160px;
    justify-content: space-between;
    align-items: center; 
-   background-color:#58595B;
+   background-color:#232426;
+   
 }
 
 .logo
 {
- width: 150px;
- height: 91px;
+ font-style: italic;
+ font-size: 30px;
+ font-weight: bold;
+ margin-left: 10px;
  cursor: pointer;
  transition: 1s ease-in-out;
+ background: linear-gradient(to right , rgba(67,124,205),red
+ );
+ -webkit-background-clip:text;
+ -webkit-text-fill-color:transparent;
+
 }
 
 .logo:hover
 {
-  width: 180px;
+  font-size: 33px;
+  background: linear-gradient(to right , rgb(5, 84, 195),rgb(176, 170, 19),rgb(237, 95, 6)
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+   font-weight: bold;
 }
 
 #searchBar
@@ -37,12 +50,12 @@
   padding: 3px 60px;
   font-family: 'Times New Roman', Times, serif;
   font-size: 13px;
-  transition: 1s ease-in-out;
-  margin-left: -80px;
+  transition: all 3s;
+  /* margin-left: -80px; */
 }
 #searchBar:hover
 {
-  padding: 7px 62px;
+  padding: 3px 70px;
 }
 
 #searchBar:focus
@@ -55,26 +68,28 @@
 {
 display: flex;
 flex-direction: column;
+margin-top: 10%;
 }
 
 .LogIn
 {
   display: flex;
-  gap:10px;
-  position: relative;
+  gap:5px;
+  align-items: end;
   font-family: sans-serif;
   color:white;
   align-items: center;
-  padding: 0px 5px 1px 15px;
-  /* background-image: linear-gradient(#000000,#434343); */
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  padding: 1px 9px;
+  background-image: linear-gradient(to right, #434343 0%, black 100%); 
   border-top-left-radius: 50%;
-  border-bottom-left-radius:50%;
-  /* border-bottom-right-radius: 50%; */
+  border-bottom-left-radius:50%; 
+
 }
 .userDetails
 {
-  margin-top: -28%;
+  margin-top: -24%;
+  margin-left: 2%;
+  padding: 10px;
 }
 
 .LogIn p
@@ -86,17 +101,22 @@ flex-direction: column;
 .logout button
 {  
  padding: 2px 10px;
- margin-top: 20px;
+ margin-top: 30px;
+ width: fit-content;
  background-image: linear-gradient(to right, #434343 0%, black 100%);
  color: #fff;
  font-family: serif;
  font-style: italic;
- font-size: 16px;
+ font-size: 15px;
  border-radius: 10px;
-width: fit-content;
+ transition: all 1s
 }
 
-
+.logout button:hover
+{
+  padding: 2px 15px;
+  box-shadow: 2px 3px 1px rgb(253, 245, 245);
+}
 
 .LogIn img
 {
@@ -108,26 +128,30 @@ width: fit-content;
 
 .fa-heart
 {
-    font-size: 28px;
-    color: red;
-    /* margin-bottom: 30%; */
+  background: linear-gradient(to right , rgb(5, 84, 195),rgb(132, 28, 4),rgb(237, 95, 6)
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+ 
     transition: color 1s ease-in-out;
     margin-left: 120px;
-}
-.fa-heart:active
-{
-font-size: larger;
+    font-size: 30px;
 }
 
 .fa-heart:hover {
-  color: #3ce73f;
+  background: linear-gradient(to right , rgb(133, 170, 222),rgb(247, 138, 113),rgb(130, 2, 83)
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+ 
+  font-size: 36px;
 }
 
 
 
 #sp
 {
-  padding: 0 3px;
+  padding: 0px 3px;
   background-color: rgb(33, 33, 30);
   color: white;
   font-weight: bold;
@@ -140,29 +164,29 @@ font-size: larger;
 
 @media screen and (max-width:1150px) 
 {
+  .logo
+  {
+    font-size: 25px;
+  }
+  .logo:hover
+  {
+    font-size: 26px;
+  }
   #searchBar
   {
-    width: 260px;
+    width: 250px;
   }
 }
 
 @media screen and (max-width:950px) 
-{
-  #searchBar
+{ 
+  .LogIn
   {
-    width: 190px;
-  }
-}
-@media screen and (max-width:870px) 
-{
-  #searchBar
-  {
-    margin-left: 1px;
+    font-size: small;
   }
 }
 
-
-@media screen and (max-width:810px) {
+@media screen and (max-width:900px) {
   .head
   {
     height: auto;
@@ -171,13 +195,13 @@ font-size: larger;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
   }
  
   .logo
   {
-    width: 200px;
     margin: auto;
+    margin-top: 11%;
   }
 
   #searchBar
@@ -187,33 +211,46 @@ font-size: larger;
     padding: 2px 35px;
     margin: auto;
   }
+  .Loginfo
+  {
+    margin: auto;
+    
+  }
 
-.Loginfo
+.userDetails
 {
-  position: absolute;
-  right: 0;
-  top:8.5%;
-  font-family: sans-serif;
-  color:white;
+  margin: auto;
+}  
 
+.LogIn
+{
+  border-radius: 4%;
+  padding: 0px 14px;
+  background: linear-gradient(to right , rgb(133, 170, 222),rgb(247, 138, 113),rgb(130, 2, 83)
+  );
+  color: rgb(26, 57, 213);
+  font-weight: bold;
+}
+.LogIn:hover
+{
+  color: rgb(5, 26, 129);
+  font-weight: bold;
+  background: linear-gradient(to right , rgb(1, 46, 109),rgb(187, 157, 3),rgb(193, 43, 138)
+  );
 }
 
 .logout button
 {
-  position: absolute;
-  font-size: 14px;
-  right: 5px;
-  top: 76%;
-  width: 73px;
-  padding: 2px 10px;
-  text-align: center;
-  
-}
+  margin: 20px;
 
+}
 .fa-heart
 {
   margin: 0;
 }
+
+
+
 }
 
 
@@ -223,13 +260,7 @@ font-size: larger;
   {
     margin-top: 10%;
   }
- 
-  .logout button
-{
-  position: absolute;
-  right: 0;
-  top:135%;
-}
+
 #searchBar
 {
   width:270px;
@@ -248,42 +279,6 @@ font-size: larger;
     padding: 2px 35px;
   }
 }
-
-@media screen and (max-width:380px) 
-{
-  .logo
-  {
-    margin-top: 10%;
-  }
-
-  .Loginfo
-  {
-    display: flex;
-    position: absolute;
-    right: 0;
-    top: 0%;
-    font-family: sans-serif;
-    color:white;
-    align-items: center;
-  }
-
-  .logout button
-  {
-    font-size: small;
-  }
-
-  .userDetails
-  {
-    margin: 0;
-    padding: 0;
-  }
-
-  #searchBar
-  {
-    margin-top: 8%;
-  }
-}
-
 
 
 @media screen and (max-width:360px) {

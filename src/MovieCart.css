@@ -95,3 +95,11 @@
 {
   font-size: 15px;
 }
+
+.no-movies
+{
+  margin:35% 2px;
+  color: white;
+  font-size: larger;
+  text-transform: uppercase;
+}

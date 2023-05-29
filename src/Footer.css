@@ -1,8 +1,8 @@
 .content
 {
-    background: rgb(13, 62, 210);
+   background:  linear-gradient(to right , rgb(5, 84, 195),rgb(10, 112, 68),rgb(93, 36, 1));
     color:rgb(196, 186, 186);
-    font-family:'Times New Roman', Times, serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 }
 .content1

@@ -1,12 +1,11 @@
 import { useState, useRef } from "react";
-import AddToFav from "./AddToFav";
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import "./NavBar.css"
 
 
 
-const NavBar = ({ fav, setFav, setSearch, imgUri }) => {
+const NavBar = ({ fav,  setSearch }) => {
   
   const inp = useRef();
 
@@ -29,11 +28,10 @@ const NavBar = ({ fav, setFav, setSearch, imgUri }) => {
         <div className="head">
 
       <a href="/">
-        {/* <marquee width="200px" direction="right" height="90px">   */}
         <abbr title="Book My Show">
        <h1 className="logo">BookMyShow</h1>
         </abbr>
-        {/* </marquee>    */}
+      
         </a>
         
         <input type="text" name=""  placeholder=

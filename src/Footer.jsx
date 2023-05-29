@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 import "./Footer.css";
 
@@ -10,7 +11,7 @@ const Footer = ()=>
 <div className="content1">
     <div>List Your Show</div>
     <div>Got a show, event, activity or a great exdiverience? Partner with us & get listed on ourSite BookMyShow</div>
-    <button>Contact Today</button>
+    <Link to="Contact"><button>Click to Contact</button></Link>
 </div>
 
 <div className="content2">

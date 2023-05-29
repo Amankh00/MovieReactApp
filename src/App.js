@@ -7,7 +7,7 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import SeatBooking from './SeatBooking';
 import Checkout from './Checkout';
-import Footer from './Footer';
+import ContactForm from "./ContactForm";
 
 
 
@@ -59,7 +59,6 @@ function App() {
 
    const selectedSeats = seatId.filter((seat) => seat.selected);
    const totalAmount = selectedSeats.reduce((acc, seat) => acc + seat.amount, 0);
-   const selectedSeatNumbers = selectedSeats.map((seat) => seat.seatId).join(", ");
  
 
 <GenreSection setData={setData} API={API} />
@@ -87,9 +86,8 @@ function App() {
       <Route path="seatBook" element={<SeatBooking seatId={seatId} setSeatId={setSeatId} />}></Route>
      
       <Route path="/Ticket" element={ <Checkout selectedSeats={selectedSeats.length} totalAmount={totalAmount} />}></Route>
-     
+     <Route path='Contact' element={<ContactForm/>}></Route>
       
-        {/* <NavBar search={search} setSearch={setSearch}/> */}
   
     </Routes> 
    

@@ -49,8 +49,9 @@
   font-family: 'Times New Roman', Times, serif;
   font-size: 13px;
   transition: all 3s;
-  background: linear-gradient(to right , rgb(211, 216, 222),rgb(194, 188, 24),rgb(229, 111, 38),rgb(142, 19, 117));
+  background: rgb(211, 217, 216);
 }
+
 #searchBar:hover
 {
   padding: 3px 70px;

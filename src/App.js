@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import MovieCart from "./MovieCart"
-import GenreSection from './GenreSection';
-import AddToFav from './AddToFav';
-import NavBar from './NavBar';
+import MovieCart from "./Components/Home/MovieCart"
+import GenreSection from './Components/GenreSection/GenreSection';
+import AddToFav from './Components/AddToFav/AddToFav';
+import NavBar from './Components/NavBar/NavBar';
 import { Auth0Provider } from "@auth0/auth0-react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import SeatBooking from './SeatBooking';
-import Checkout from './Checkout';
-import ContactForm from "./ContactForm";
+import SeatBooking from './Components/SeatBooking/SeatBooking';
+import Checkout from './Components/Checkout/Checkout';
+import ContactForm from "./Components/ContactForm/ContactForm";
 
 
 

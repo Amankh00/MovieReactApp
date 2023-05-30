@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './MovieCart.css';
 import { useAuth0 } from '@auth0/auth0-react';
-import GenreSection from './GenreSection';
+import GenreSection from '../GenreSection/GenreSection';
 import { Link } from 'react-router-dom';
-import Footer from './Footer';
+import Footer from '../Footer/Footer';
 
 const MovieCart = ({ API, imgUri, search, fav, setFav }) => {
   const { v4: uuidv4 } = require('uuid');

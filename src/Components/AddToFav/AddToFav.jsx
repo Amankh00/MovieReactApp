@@ -1,7 +1,6 @@
 import { useEffect } from "react";
-import "./MovieCart";
 import { useAuth0 } from "@auth0/auth0-react";
-import Home from "./Home";
+import Home from "../Home/Home";
 
 const { v4: uuidv4 } = require('uuid');
 

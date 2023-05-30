@@ -60,7 +60,7 @@
 #searchBar:focus
 {
   outline: none;
-  border-bottom: 2px solid rgb(192, 15, 183);
+  border-bottom: 4px solid rgb(192, 15, 183);
 }
 
 .Loginfo

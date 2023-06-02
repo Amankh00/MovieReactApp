@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import {  useRef } from "react";
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import "./NavBar.css"

@@ -5,6 +5,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import GenreSection from '../GenreSection/GenreSection';
 import { Link } from 'react-router-dom';
 import Footer from '../Footer/Footer';
+import AboutUs from '../Footer/AboutUs';
 
 const MovieCart = ({ API, imgUri, search, fav, setFav }) => {
   const { v4: uuidv4 } = require('uuid');
@@ -87,7 +88,8 @@ const MovieCart = ({ API, imgUri, search, fav, setFav }) => {
         ))}
         {filteredData.length === 0 && <p className="no-movies">Movie not found.</p>}
       </div>
-      <Footer />
+      {/* <Footer /> */}
+      <AboutUs/>
     </>
   );
 };
